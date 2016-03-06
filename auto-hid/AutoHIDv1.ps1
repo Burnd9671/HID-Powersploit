@@ -1,4 +1,5 @@
-﻿$Tablet = "BurnD-Sero"
+# Set Device Names
+$Tablet = "BurnD-Sero"
 $Computer = "BurnD-Machine2"
 try {
     $DevIP = [System.Net.Dns]::GetHostAddresses($Computer) | ? {$_.AddressFamily -eq 'InterNetwork'} | select -expand IPAddressToString
