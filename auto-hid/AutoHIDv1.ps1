@@ -1,6 +1,6 @@
 # Automatically find IP Addresses From Mac Address
-$Computer = "24:77:03:22:09:60"
-$Tablet = "00:1A:99:D4:F3:43"
+$Computer = "24-77-03-22-09-60"
+$Tablet = "00-1A-99-D4-F3-43"
 try {
     $DevIP = arp -a | select-string "$Computer" |% { $_.ToString().Trim().Split(" ")[0] }
     }
